@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Home - Open PRO',
+  title: 'Home - Dimoverse',
   description: 'Page description',
 }
 
@@ -7,6 +7,7 @@ import Hero from '@/components/hero'
 import Features from '@/components/features'
 import Newsletter from '@/components/newsletter'
 import Zigzag from '@/components/zigzag'
+import Team from '@/components/team'
 import Testimonials from '@/components/testimonials'
 
 export default function Home() {
@@ -14,9 +15,10 @@ export default function Home() {
     <>
       <Hero />
       <Features />
-      <Zigzag />
+      {/*<Zigzag /> */}
       <Testimonials />
       <Newsletter />
+      <Team />
     </>
   )
 }
