@@ -1,3 +1,6 @@
+import VideoThumb from '@/public/images/hero-image-01.png'
+import ModalVideo from '@/components/modal-video'
+
 export default function Features() {
   return (
     <section>
@@ -6,48 +9,14 @@ export default function Features() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-          <h2 className="h2 mb-4">Furniture sellers seek cutting-edge visualization and immersive, photorealistic online experiences.</h2>
-          <p className="text-xl text-gray-400">We specialize in visualization solutions and elevating the online shopping experience for our clients.</p>
+          <h2 className="h2 mb-4">Furniture buyers seek immersive visualization and photorealistic online shopping experiences.</h2>
+          <p className="text-xl text-gray-400">Our mission is improving your customer's online shopping experience by visualizing another dimension.</p>
+          <br />
+          <p className="text-xl">Features</p>
           </div>
 
           {/* Items */}
           <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
-
-            {/* 1st item */}
-            <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
-              <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <rect className="fill-current text-purple-600" width="64" height="64" rx="32" />
-                <path className="stroke-current text-purple-100" d="M30 39.313l-4.18 2.197L27 34.628l-5-4.874 6.91-1.004L32 22.49l3.09 6.26L42 29.754l-3 2.924" strokeLinecap="square" strokeWidth="2" fill="none" fillRule="evenodd" />
-                <path className="stroke-current text-purple-300" d="M43 42h-9M43 37h-9" strokeLinecap="square" strokeWidth="2" />
-              </svg>
-              <h4 className="h4 mb-2">Room Scan</h4>
-              <p className="text-lg text-gray-400 text-center">Shoppers can effortlessly scan their room using their smartphone, seamlessly integrating real-world environments with interactive digital experiences.</p>
-            </div>
-
-            {/* 2nd item */}
-            <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="100" data-aos-anchor="[data-aos-id-blocks]">
-              <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <circle className="fill-current text-purple-600" cx="32" cy="32" r="32" />
-                <path className="stroke-current text-purple-100" strokeWidth="2" strokeLinecap="square" d="M21 23h22v18H21z" fill="none" fillRule="evenodd" />
-                <path className="stroke-current text-purple-300" d="M26 28h12M26 32h12M26 36h5" strokeWidth="2" strokeLinecap="square" />
-              </svg>
-              <h4 className="h4 mb-2">Visualization</h4>
-              <p className="text-lg text-gray-400 text-center">Shoopers can effortlessly visualize a digital twin of their room, created through advanced technology, providing an immersive and detailed representation.</p>
-            </div>
-
-            {/* 3rd item */}
-            <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="[data-aos-id-blocks]">
-              <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <rect className="fill-current text-purple-600" width="64" height="64" rx="32" />
-                <g transform="translate(21 21)" strokeLinecap="square" strokeWidth="2" fill="none" fillRule="evenodd">
-                  <ellipse className="stroke-current text-purple-300" cx="11" cy="11" rx="5.5" ry="11" />
-                  <path className="stroke-current text-purple-100" d="M11 0v22M0 11h22" />
-                  <circle className="stroke-current text-purple-100" cx="11" cy="11" r="11" />
-                </g>
-              </svg>
-              <h4 className="h4 mb-2">Room Editing</h4>
-              <p className="text-lg text-gray-400 text-center">Shoppers can easily edit their room by removing existing furniture pieces or adding new ones from a comprehensive catalogue, all within a seamless and intuitive interface.</p>
-            </div>
 
             {/* 4th item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="300" data-aos-anchor="[data-aos-id-blocks]">
@@ -59,7 +28,7 @@ export default function Features() {
                 </g>
               </svg>
               <h4 className="h4 mb-2">Personalised Design</h4>
-              <p className="text-lg text-gray-400 text-center">A personalized design experience tailored specifically for furniture shoppers.</p>
+              <p className="text-lg text-gray-400 text-center">Personalized design experience tailored specifically for furniture shoppers.</p>
             </div>
 
             {/* 5th item */}
@@ -72,7 +41,7 @@ export default function Features() {
                 </g>
               </svg>
               <h4 className="h4 mb-2">Catalogue Buying</h4>
-              <p className="text-lg text-gray-400 text-center">Revolutionize your shopping experience with our catalogue browsing features, offering intuitive navigation.</p>
+              <p className="text-lg text-gray-400 text-center">Revolutionize furniture shopping experience with our catalogue browsing feature, offering intuitive navigation.</p>
             </div>
 
             {/* 6th item */}
@@ -86,13 +55,21 @@ export default function Features() {
                 </g>
               </svg>
               <h4 className="h4 mb-2">Improved Visuals</h4>
-              <p className="text-lg text-gray-400 text-center">Our product features enhanced visuals, specifically curated lifestyle imagery, to elevate the aesthetic appeal and immersive experience for our clients.</p>
+              <p className="text-lg text-gray-400 text-center">Enhanced 3D visuals and specifically curated lifestyle imagery that elevates the aesthetic appeal of the furniture.</p>
             </div>
 
           </div>
 
         </div>
       </div>
+      {<ModalVideo
+            thumb={VideoThumb}
+            thumbWidth={1024}
+            thumbHeight={576}
+            thumbAlt="Video thumbnail"
+            video="/videos/demo.mp4"
+            videoWidth={1920}
+            videoHeight={1080} />}
     </section>
   )
 }

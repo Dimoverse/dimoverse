@@ -9,15 +9,17 @@ import Newsletter from '@/components/newsletter'
 import Zigzag from '@/components/zigzag'
 import Team from '@/components/team'
 import Testimonials from '@/components/testimonials'
+import Working from '@/components/working'
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <Working />
+      <Testimonials />
       <Features />
       {/*<Zigzag /> */}
-      <Testimonials />
-      <Newsletter />
+      {/*<Newsletter />*/}
       <Team />
     </>
   )

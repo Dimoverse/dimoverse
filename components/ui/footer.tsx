@@ -13,13 +13,11 @@ export default function Footer() {
             {/* 1st block */}
             <div className="md:col-span-4 lg:col-span-5">
               <div className="mb-2">
-                {/* Logo 
                 <Link href="/" className="inline-block" aria-label="Dimoverse">
-                  <img src="/images/dv.png" alt="Dimoverse" width="30" height="20" />
+                  <img src="/images/dv.png" alt="Dimoverse" width="80" height="80" />
                 </Link>
-                */}
               </div>
-              <div className="text-gray-400">Enhancing customer experiences through an added dimension of innovation.</div>
+              <div className="text-gray-400">Improving your customer <b>online shopping experience</b> by visualizing another dimension.</div>
             </div>
 
             {/* 2nd, 3rd and 4th blocks */}
