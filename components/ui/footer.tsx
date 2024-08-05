@@ -1,5 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+
+import location from '@/public/images/location.webp'
 
 export default function Footer() {
   return (
@@ -18,6 +21,11 @@ export default function Footer() {
                 </Link>
               </div>
               <div className="text-gray-400">Improving your customer <b>online shopping experience</b> by visualizing another dimension.</div>
+              <br></br>
+              <div className="text-gray-400 flex items-center">
+              <Image className="rounded-full" src={location} width={28} height={28} alt="location" />
+              <span className="ml-2">Zurich, Switzerland</span>
+            </div>
             </div>
 
             {/* 2nd, 3rd and 4th blocks */}

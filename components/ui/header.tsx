@@ -1,42 +1,61 @@
-import Link from 'next/link'
-import MobileMenu from './mobile-menu'
-
 export default function Header() {
   return (
-    <header className="absolute w-full z-30">
+    <header className="bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-20">
-          {/* Site branding */}
-          <div className="shrink-0 mr-4">
-            {/* Logo */}
-            <Link href="/" className="inline-block" aria-label="Dimoverse">
-              <img src="/images/dv.png" alt="Dimoverse" width="80" height="80" />
-            </Link>
-          </div>
-
-          {/* Desktop navigation 
-          <nav className="hidden md:flex md:grow">
+        <div className="flex items-left justify-between h-20">
+        <br />
+          <nav className="md:flex md:grow">
             <ul className="flex grow justify-end flex-wrap items-center">
+              
               <li>
-                <Link
-                  href="/signin"
-                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  Sign in
-                </Link>
+                <a href="#hero" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                  Home
+                </a>
               </li>
               <li>
-                <Link href="/signup" className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3">
-                  Sign up
-                </Link>
+                <a href="#working" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                  Solution
+                </a>
+              </li>
+              {/* Add your links here
+              <li>
+                <a href="#testimonials" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                  Testimonials
+                </a>
+              </li>
+              <li>
+                <a href="#features" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                  Features
+                </a>
+              </li>
+               
+              <li>
+                <a href="#videos" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                  Research
+                </a>
+              </li>
+              */}
+              <li>
+                <a href="#team" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                  Team
+                </a>
+              </li>
+              {/* Add your links here
+              <li>
+                <a href="#partner" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                  Partner
+                </a>
+              </li>
+               */}
+              <li>
+                <a href="#newsletter" className="font-medium w-full inline-flex items-center justify-center border border-transparent px-2 py-1 my-1 rounded-sm text-white bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out">
+                  Contact Us
+                </a>
               </li>
             </ul>
-          </nav>
-          */}
-          <MobileMenu />
-
+          </nav>          
         </div>
       </div>
     </header>
-  )
+  );
 }

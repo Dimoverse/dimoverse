@@ -62,14 +62,7 @@ export default function Features() {
 
         </div>
       </div>
-      {<ModalVideo
-            thumb={VideoThumb}
-            thumbWidth={1024}
-            thumbHeight={576}
-            thumbAlt="Video thumbnail"
-            video="/videos/demo.mp4"
-            videoWidth={1920}
-            videoHeight={1080} />}
+
     </section>
   )
 }
