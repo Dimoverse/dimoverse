@@ -19,7 +19,7 @@ const ModelLoader: React.FC<ModelLoaderProps> = ({ modelPath }) => {
 
   useFrame(() => {
     if (modelRef.current) {
-      modelRef.current.rotation.y += 0.05;
+      modelRef.current.rotation.y += 0.01;
     }
   });
 
