@@ -33,7 +33,7 @@ export default function Team() {
             <Image className="rounded-full" src={TeamImage02} width={128} height={128} alt="TeamImage 02" />
             <h4 className="h4 mb-2">Dorine Lachat</h4>
             <p className="text-lg text-gray-400 text-center">Co-Founder</p>
-            <p className="text-lg text-gray-400 text-center">Bachelor in Management University of Fribourg</p>
+            <p className="text-lg text-gray-400 text-center">Master in banking and finance <br/>University of Sankt-Gallen</p>
           </div>
 
           {/* 3rd item */}
