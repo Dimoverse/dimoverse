@@ -25,7 +25,7 @@ export default function Team() {
             <Image className="rounded-full" src={TeamImage01} width={128} height={128} alt="TeamImage 01" />
             <h4 className="h4 mb-2">Alexandre Binninger</h4>
             <p className="text-lg text-gray-400 text-center">Co-Founder</p>
-            <p className="text-lg text-gray-400 text-center">Ph.D in Computer Graphics ETH Zurich</p>
+            <p className="text-lg text-gray-400 text-center">Ph.D in Computer Graphics <br/>ETH Zurich</p>
           </div>
 
           {/* 2nd item */}
@@ -41,7 +41,7 @@ export default function Team() {
             <Image className="rounded-full" src={TeamImage03} width={128} height={128} alt="TeamImage 03" />
             <h4 className="h4 mb-2">Jessie Li</h4>
             <p className="text-lg text-gray-400 text-center">Co-Founder</p>
-            <p className="text-lg text-gray-400 text-center">Bachelor in Comp. Science ETH Zurich</p>
+            <p className="text-lg text-gray-400 text-center">Bachelor in Comp. Science <br/>ETH Zurich</p>
           </div>
 
         </div>
