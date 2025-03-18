@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 import TeamImage01 from '@/public/images/team-01-ab.jpeg'
 import TeamImage02 from '@/public/images/team-02-dl.jpeg'
-import TeamImage03 from '@/public/images/team-03-jl.jpeg'
-import TeamImage05 from '@/public/images/team-05-st.jpg'
+// import TeamImage03 from '@/public/images/team-03-jl.jpeg'
+// import TeamImage05 from '@/public/images/team-05-st.jpg'
 
 export default function Team() {
     return (
@@ -18,7 +18,7 @@ export default function Team() {
         </div>
 
         {/* Items */}
-        <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
+        <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-2 lg:gap-10 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
 
           {/* 1st item */}
           <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
@@ -37,17 +37,17 @@ export default function Team() {
           </div>
 
           {/* 3rd item */}
-          <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="[data-aos-id-blocks]">
+          {/* <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="[data-aos-id-blocks]">
             <Image className="rounded-full" src={TeamImage03} width={128} height={128} alt="TeamImage 03" />
             <h4 className="h4 mb-2">Jessie Li</h4>
             <p className="text-lg text-gray-400 text-center">Co-Founder</p>
             <p className="text-lg text-gray-400 text-center">Bachelor in Comp. Science <br/>ETH Zurich</p>
-          </div>
+          </div> */}
 
         </div>
-        <br></br>
+        {/* <br></br> */}
         {/* Mentors and Advisors item */}
-        <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-1 lg:gap-10 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
+        {/* <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-1 lg:gap-10 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
           <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="[data-aos-id-blocks]">
             <Image className="rounded-full" src={TeamImage05} width={128} height={128} alt="TeamImage 05" />
             <h4 className="h4 mb-2">Stefan Tuchschmid</h4>
@@ -56,7 +56,7 @@ export default function Team() {
             <p className="text-lg text-gray-400 text-center">CEO and Founder of Scanvio Medical</p>
             <p className="text-lg text-gray-400 text-center">ETH AI Center</p>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </div>
