@@ -1,9 +1,72 @@
+'use client';
 import Link from 'next/link'
-import VideoThumb from '@/public/images/hero-image-01.png'
-import ModalVideo from '@/components/modal-video'
+import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import Logo from '@/components/logo'
 
+import { motion } from 'framer-motion';
+
 export default function Hero() {
+  const router = useRouter();
+  const [countdown, setCountdown] = useState(16); // Start countdown at 10 seconds
+  const [animationPhase, setAnimationPhase] = useState('initial'); // Track animation phase
+
+  // Countdown logic and redirect
+  useEffect(() => {
+    if (countdown === 0) {
+      router.push('https://www.fabricaible.com');
+      return;
+    }
+
+    const timer = setInterval(() => {
+      setCountdown((prev) => prev - 1);
+    }, 1000); // Decrease every 1 second
+
+    return () => clearInterval(timer); // Cleanup on unmount
+  }, [countdown, router]);
+
+  // Animation sequence control
+  useEffect(() => {
+    // Start with showing the initial elements
+    const showTimer = setTimeout(() => {
+      setAnimationPhase('visible');
+    }, 100);
+
+    // Then fade them out
+    const fadeTimer = setTimeout(() => {
+      setAnimationPhase('fadeOut');
+    }, 5000); // Fade out after 0 seconds
+
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(fadeTimer);
+    };
+  }, []);
+  
+  const fadeUp = (delay: number) => ({
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { delay, duration: 0.8 }
+    }
+  });
+
+  const fadeUpThenOut = (delay: number, fadeOutDelay: number) => ({
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { delay, duration: 0.8 }
+    },
+    fadeOut: {
+      opacity: 0,
+      y: -20,
+      transition: { delay: fadeOutDelay, duration: 0.8 },
+      height: 0
+    }
+  });
+
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
@@ -22,44 +85,79 @@ export default function Hero() {
         </div>
 
         {/* Hero content */}
-        <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
+        <div className="relative pb-16 md:pb-32">
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+          <div className="max-w-3xl mx-auto text-center md:pb-16">
             {/* <Link href="/" className="inline-block" aria-label="Dimoverse"> */}
-              {/* <img src="/images/dv.png" alt="Dimoverse" width="320" height="320" /> */}
-              <div className='inline-block'>
+            {/* <img src="/images/dv.png" alt="Dimoverse" width="320" height="320" /> */}
+            <div className='inline-block'>
               <Logo />
-              </div>
-            {/* </Link> */}
-            <h1 className="h1 mb-4" data-aos="fade-up">Dimoverse</h1>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">
-              Boost <b>furniture sales</b> with our solution.<br />
-              Let your customers visualize their <b>perfect home.</b>
-            </p>
-            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              {/* CTA button 
-              <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Start free trial</a>
-              </div>
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Learn more</a>
-              </div>
-              */}
             </div>
+
+            <div className="text-center space-y-6">
+              <motion.h1
+                className="h1 mb-0"
+                variants={fadeUpThenOut(0, 0)}
+                initial="hidden"
+                animate={animationPhase}
+              >
+                Dimoverse
+              </motion.h1>
+
+              <motion.h3
+                className="h3 mb-4"
+                variants={fadeUpThenOut(1, 0)}
+                initial="hidden"
+                animate={animationPhase}
+              >
+                doesn&apos;t exist anymore
+              </motion.h3>
+
+              <motion.p
+                className="text-xl text-gray-400 mb-8"
+                variants={fadeUpThenOut(3, 0)}
+                initial="hidden"
+                animate={animationPhase}
+              >
+                But <b>this is not the end</b> of the story!<br />
+              </motion.p>
+
+              <motion.h3
+                className="h3 mb-0"
+                variants={fadeUp(6)}
+                initial="hidden"
+                animate="visible"
+              >
+                Find what we are up to at
+              </motion.h3>
+
+              <motion.div
+                variants={fadeUp(6)}
+                initial="hidden"
+                animate="visible"
+              >
+                <Link
+                  href="https://www.fabricaible.com"
+                  className="h1 text-rose-400 hover:text-rose-600 underline underline-offset-4 transition"
+                  target="https://www.fabricaible.com"
+                  rel="noopener noreferrer"
+                >
+                  fabricaible.com
+                </Link>
+              </motion.div>
+              <motion.p
+                className="text-lg text-white mt-4"
+                variants={fadeUp(6)}
+                initial="hidden"
+                animate="visible"
+              >
+                Redirecting in {countdown}...
+              </motion.p>
+            </div>
+
           </div>
-
-          {/*<ModalVideo
-            thumb={VideoThumb}
-            thumbWidth={1024}
-            thumbHeight={576}
-            thumbAlt="Video thumbnail"
-            video="/videos/demo.mp4"
-            videoWidth={1920}
-            videoHeight={1080} />*/}
-
         </div>
-
       </div>
     </section>
   )

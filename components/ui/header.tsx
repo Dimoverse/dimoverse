@@ -7,16 +7,16 @@ export default function Header() {
           <nav className="md:flex md:grow">
             <ul className="flex grow justify-end flex-wrap items-center">
               
-              <li>
+              {/* <li>
                 <a href="#hero" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
                   Home
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="#working" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
                   Solution
                 </a>
-              </li>
+              </li> */}
               {/* Add your links here
               <li>
                 <a href="#testimonials" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
@@ -35,11 +35,11 @@ export default function Header() {
                 </a>
               </li>
               */}
-              <li>
+              {/* <li>
                 <a href="#team" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
                   Team
                 </a>
-              </li>
+              </li> */}
               {/* Add your links here
               <li>
                 <a href="#partner" className="font-medium text-white-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
@@ -47,11 +47,11 @@ export default function Header() {
                 </a>
               </li>
                */}
-              <li>
+              {/* <li>
                 <a href="#newsletter" className="font-medium w-full inline-flex items-center justify-center border border-transparent px-2 py-1 my-1 rounded-sm text-white bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out">
                   Contact Us
                 </a>
-              </li>
+              </li> */}
             </ul>
           </nav>          
         </div>
