@@ -20,7 +20,7 @@ export default function Home() {
       <section id="hero">
         <Hero />
       </section>
-      <section id="working">
+      {/* <section id="working">
         <Working />
       </section>
       <section id="testimonials">
@@ -31,7 +31,7 @@ export default function Home() {
       </section>
       <section id="videos">
         <Videos />
-      </section>
+      </section> */}
       {/*<section id="zigzag">
         <Zigzag />
       </section>*/}
@@ -41,9 +41,9 @@ export default function Home() {
       <section id="partner">
         <Partner />
       </section>
-      <section id="newsletter">
+      {/* <section id="newsletter">
         <Newsletter />
-      </section>
+      </section> */}
     </>
   )
 }

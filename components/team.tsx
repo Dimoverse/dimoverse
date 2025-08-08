@@ -18,7 +18,7 @@ export default function Team() {
         </div>
 
         {/* Items */}
-        <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-2 lg:gap-10 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
+        <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-1 lg:grid-cols-1 lg:gap-10 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
 
           {/* 1st item */}
           <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
@@ -29,12 +29,12 @@ export default function Team() {
           </div>
 
           {/* 2nd item */}
-          <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="100" data-aos-anchor="[data-aos-id-blocks]">
+          {/* <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="100" data-aos-anchor="[data-aos-id-blocks]">
             <Image className="rounded-full" src={TeamImage02} width={128} height={128} alt="TeamImage 02" />
             <h4 className="h4 mb-2">Dorine Lachat</h4>
             <p className="text-lg text-gray-400 text-center">Co-Founder</p>
             <p className="text-lg text-gray-400 text-center">Master in banking and finance <br/>University of Sankt-Gallen</p>
-          </div>
+          </div> */}
 
           {/* 3rd item */}
           {/* <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="[data-aos-id-blocks]">
